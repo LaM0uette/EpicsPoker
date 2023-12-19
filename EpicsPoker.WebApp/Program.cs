@@ -1,10 +1,23 @@
 using EpicsPoker.WebApp.Components;
+using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddResponseCompression(opts =>
+{
+    opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
+        new[] { "application/octet-stream" });
+});
+
+// Blazor
+builder.Services.AddServerSideBlazor();
+
+// Singleton
+// builder.Services.AddScoped<...>();
 
 var app = builder.Build();
 
@@ -23,5 +36,8 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
+
+// SignalR
+// app.MapHub<...>("/roomhub");
 
 app.Run();

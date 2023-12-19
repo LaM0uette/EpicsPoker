@@ -1,0 +1,15 @@
+
+/* Global */
+:root {
+    
+    /* colors */
+    --primary-color: #d99a67;
+    --secondary-color: #4C5B61;
+    --tertiary-color: #F1F6F8;
+    
+    /* gray */
+    --gray-light-color: #CCC;
+    
+    /* shadow */
+    --shadow: rgba(9, 30, 66, 0.25) 0 4px 8px -2px, rgba(9, 30, 66, 0.08) 0 0 0 1px;
+}
