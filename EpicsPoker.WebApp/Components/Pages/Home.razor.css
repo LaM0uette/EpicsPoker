@@ -1,0 +1,14 @@
+
+
+/* Room link */
+.room-link__container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Room parameters */
+.room-parameters__container {
+    display: flex;
+    flex-direction: row;
+}
