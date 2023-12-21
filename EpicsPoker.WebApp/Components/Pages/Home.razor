@@ -1,4 +1,6 @@
 ﻿@page "/"
+@attribute [RenderModeInteractiveServer(false)]
+@inherits HomeBase
 
 <PageTitle>Home</PageTitle>
 
@@ -10,7 +12,7 @@
     <div class="room-link__container">
 
         <div>
-            <p>Jesuisunsuperlienetmonbutestdetrequandmemeassezlongpourvoirleresultatfinale</p>
+            <p>@RoomLink</p>
         </div>
 
         <button>
@@ -26,13 +28,22 @@
     
     @* Room parameters *@
     <div class="room-parameters__container">
-        <button>3</button>
-        <button>5</button>
-        <button>7</button>
+        
+        <p>Actual: @PicsParameter     </p>
+        
+        <label for="pics-parameters-3">3</label>
+        <input id="pics-parameters-3" name="pics-parameters" type="radio" value="3" @onchange="OnChangePicsParameters"/>  
+        
+        <label for="pics-parameters-5">5</label>
+        <input id="pics-parameters-5" name="pics-parameters" type="radio" value="5" @onchange="OnChangePicsParameters"/>  
+        
+        <label for="pics-parameters-7">7</label>
+        <input id="pics-parameters-7" name="pics-parameters" type="radio" value="7" @onchange="OnChangePicsParameters"/>   
+        
     </div>
         
     
     @* Create room *@
-    <button>CREATE</button>
+    <button @onclick="CreateRoom">CREATE</button>
 
 </div>

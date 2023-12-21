@@ -1,4 +1,6 @@
 using EpicsPoker.WebApp.Components;
+using EpicsPoker.WebApp.Components.Services.HubServices;
+using EpicsPoker.WebApp.Hubs;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,7 +19,7 @@ builder.Services.AddResponseCompression(opts =>
 builder.Services.AddServerSideBlazor();
 
 // Singleton
-// builder.Services.AddScoped<...>();
+builder.Services.AddScoped<HubService>();
 
 var app = builder.Build();
 
@@ -38,6 +40,6 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // SignalR
-// app.MapHub<...>("/roomhub");
+app.MapHub<RoomHub>("/room-hub");
 
 app.Run();
