@@ -1,5 +1,6 @@
 using EpicsPoker.WebApp.Components;
 using EpicsPoker.WebApp.Hubs;
+using EpicsPoker.WebApp.Services;
 using EpicsPoker.WebApp.Services.HubServices;
 using Microsoft.AspNetCore.ResponseCompression;
 
@@ -20,6 +21,7 @@ builder.Services.AddServerSideBlazor();
 
 // Singleton
 builder.Services.AddScoped<HubService>();
+builder.Services.AddScoped<JsServices>();
 
 var app = builder.Build();
 

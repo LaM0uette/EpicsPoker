@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 
 namespace EpicsPoker.WebApp.Services.HubServices;
 
-public class HubService(NavigationManager navigationManager) : IHubService, IRoomService, IAsyncDisposable
+public class HubService(NavigationManager navigationManager) : IHubService, IAsyncDisposable
 {
     #region Statements
 
