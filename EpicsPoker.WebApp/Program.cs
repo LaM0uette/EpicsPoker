@@ -20,7 +20,7 @@ builder.Services.AddResponseCompression(opts =>
 builder.Services.AddServerSideBlazor();
 
 // Singleton
-builder.Services.AddScoped<HubService>();
+builder.Services.AddScoped<IHubService, HubService>();
 builder.Services.AddScoped<JsService>();
 
 var app = builder.Build();
