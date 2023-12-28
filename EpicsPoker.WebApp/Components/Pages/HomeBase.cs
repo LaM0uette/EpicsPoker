@@ -25,7 +25,7 @@ public class HomeBase : ComponentBase
         await _jsService.CopyToClipboardAsync(RoomLink);
     }
     
-    protected async Task GotoWaitingRoom()
+    protected async Task GotoRoom()
     {
         if (string.IsNullOrEmpty(RoomLink))
             return;
@@ -42,7 +42,7 @@ public class HomeBase : ComponentBase
     protected async void CreateRoom()
     {
         var roomName = CommonMethods.GenerateKeyString();
-        RoomLink = _hubService.GetBaseUri() + $"WaitingRoom/{roomName}";
+        RoomLink = _hubService.GetBaseUri() + $"Room/{roomName}";
 
         await _hubService.CreateRoomAsync(roomName);
     }

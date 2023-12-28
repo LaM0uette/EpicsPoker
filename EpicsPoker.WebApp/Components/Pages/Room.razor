@@ -1,4 +1,15 @@
 ﻿@page "/Room/{RoomName}"
+@using EpicsPoker.WebApp.Components.Entity
 @inherits RoomBase
 
 <h3>Room: @RoomName</h3>
+
+@if (CurrentGameState == GameState.WaitingForPlayers)
+{
+    <h3>WaitingPlayer</h3>
+    <h3>1/2</h3>
+}
+else if (CurrentGameState == GameState.ChoosePics)
+{
+    <h3>Choose pics</h3>
+}
