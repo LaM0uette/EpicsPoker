@@ -9,7 +9,7 @@ public class HomeBase : ComponentBase
 {
     #region Statements
     
-    [Inject] public NavigationManager NavigationManager { get; init; } = default!;
+    [Inject] private NavigationManager _navigationManager { get; init; } = default!;
     [Inject] private IHubService _hubService { get; init; } = default!;
     [Inject] private JsService _jsService { get; init; } = default!;
 
@@ -31,7 +31,7 @@ public class HomeBase : ComponentBase
             return;
         
         await _jsService.CopyToClipboardAsync(RoomLink);
-        NavigationManager.NavigateTo(RoomLink);
+        _navigationManager.NavigateTo(RoomLink);
     }
     
     protected void OnChangePicsParameters(ChangeEventArgs obj)
