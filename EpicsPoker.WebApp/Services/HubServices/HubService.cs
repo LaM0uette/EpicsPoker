@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.SignalR.Client;
 
-namespace EpicsPoker.WebApp.Components.Services.HubServices;
+namespace EpicsPoker.WebApp.Services.HubServices;
 
 public class HubService(NavigationManager navigationManager) : IHubService, IRoomService, IAsyncDisposable
 {

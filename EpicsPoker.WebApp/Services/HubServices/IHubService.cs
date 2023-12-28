@@ -1,4 +1,4 @@
-﻿namespace EpicsPoker.WebApp.Components.Services.HubServices;
+﻿namespace EpicsPoker.WebApp.Services.HubServices;
 
 public interface IHubService
 {

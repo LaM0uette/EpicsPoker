@@ -1,5 +1,5 @@
-﻿using EpicsPoker.WebApp.Components.Services.HubServices;
-using EpicsPoker.WebApp.Components.Utils;
+﻿using EpicsPoker.WebApp.Services.HubServices;
+using EpicsPoker.WebApp.Utils;
 using Microsoft.AspNetCore.Components;
 
 namespace EpicsPoker.WebApp.Components.Pages;

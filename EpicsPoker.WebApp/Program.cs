@@ -1,6 +1,6 @@
 using EpicsPoker.WebApp.Components;
-using EpicsPoker.WebApp.Components.Services.HubServices;
 using EpicsPoker.WebApp.Hubs;
+using EpicsPoker.WebApp.Services.HubServices;
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);

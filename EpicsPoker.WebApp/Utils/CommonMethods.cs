@@ -1,4 +1,4 @@
-﻿namespace EpicsPoker.WebApp.Components.Utils;
+﻿namespace EpicsPoker.WebApp.Utils;
 
 public static class CommonMethods
 {
