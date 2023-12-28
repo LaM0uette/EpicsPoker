@@ -11,7 +11,7 @@ public class HomeBase : ComponentBase
     
     [Inject] public NavigationManager NavigationManager { get; init; } = default!;
     [Inject] private IHubService _hubService { get; init; } = default!;
-    [Inject] private JsServices _jsServices { get; init; } = default!;
+    [Inject] private JsService _jsService { get; init; } = default!;
 
     protected string RoomLink { get; private set; } = "";
     protected int PicsParameter { get; private set; }
@@ -22,7 +22,7 @@ public class HomeBase : ComponentBase
     
     protected async Task CopyRoomLink()
     {
-        await _jsServices.CopyToClipboardAsync(RoomLink);
+        await _jsService.CopyToClipboardAsync(RoomLink);
     }
     
     protected async Task GotoRoomLink()
@@ -30,7 +30,7 @@ public class HomeBase : ComponentBase
         if (string.IsNullOrEmpty(RoomLink))
             return;
         
-        await _jsServices.CopyToClipboardAsync(RoomLink);
+        await _jsService.CopyToClipboardAsync(RoomLink);
         NavigationManager.NavigateTo(RoomLink);
     }
     

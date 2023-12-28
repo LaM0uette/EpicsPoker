@@ -21,7 +21,7 @@ builder.Services.AddServerSideBlazor();
 
 // Singleton
 builder.Services.AddScoped<HubService>();
-builder.Services.AddScoped<JsServices>();
+builder.Services.AddScoped<JsService>();
 
 var app = builder.Build();
 

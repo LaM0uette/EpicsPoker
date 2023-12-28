@@ -2,7 +2,7 @@
 
 namespace EpicsPoker.WebApp.Services;
 
-public class JsServices(IJSRuntime JSRuntime)
+public class JsService(IJSRuntime JSRuntime)
 {
     public async Task CopyToClipboardAsync(string text)
     {
