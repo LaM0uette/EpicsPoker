@@ -4,4 +4,5 @@ public enum GameState
 {
     WaitingForPlayers,
     ChoosePics,
+    ChooseCards,
 }

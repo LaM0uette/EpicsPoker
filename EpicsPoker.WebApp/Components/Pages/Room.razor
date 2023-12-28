@@ -1,4 +1,5 @@
 ﻿@page "/Room/{RoomName}"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @using EpicsPoker.WebApp.Components.Entity
 @inherits RoomBase
 
@@ -12,4 +13,12 @@
 else if (CurrentGameState == GameState.ChoosePics)
 {
     <h3>Choose pics</h3>
+    
+    <div>
+        @* TODO: 10 devras être modifié par la paramètre du nombre de pics *@
+        @for (var i = 0; i < PicsParameter; i++)
+        {
+            <button @onclick="OnClickOnCard">+</button>
+        }
+    </div>
 }
